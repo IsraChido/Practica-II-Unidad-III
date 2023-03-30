@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/00fda33b-8048-493d-910d-9079298fc668/resourceGroups/AzurePractica2-rg/providers/Microsoft.Web/sites/AzurePractica2",
+    "appService.deploySubpath": "."
+}
