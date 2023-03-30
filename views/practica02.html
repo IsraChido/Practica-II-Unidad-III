@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <script src="../js/axios.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Practica</title>
+</head>
+<body onload="mostrarT()" class="fondo">
+    <div class="container-fluid">
+        <section id="lista">
+            <h1 class="text-center display-1">Listado de alumnos</h1>
+            <table class="table table-dark table-hover table-bordered table-sm" id="tabla">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Matricula</th>
+                        <th>Nombre</th>
+                        <th>Domicilio</th>
+                        <th>Sexo</th>
+                        <th>Especialidad</th>
+                   </tr>
+                </thead>
+            </table>
+        </section>
+        <section id="datos">
+            <form>
+                <div class="input-group">
+                    <input class="form-control" type="number" name="matricula" id="matricula" placeholder="Matricula" required="true" >
+                    <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Nombre" >
+                    <input class="form-control" type="text" name="domicilio" id="Domicilio" placeholder="Domicilio">
+                    <select class="form-control form-select" name="sexo" id="sexo">
+                        <option value="M">Masculino</option>
+                        <option value="F">Femenino</option>
+                    </select>
+                    <input class="form-control" type="text" name="especialidad" id="Especialidad" placeholder="Especialidad" >
+                </div>
+                <br>
+                <button id="btnBuscar" class="btn btn-info" onclick="buscar()" style="float:left;">Buscar</button>
+                <div style="float:right;">
+                    <button id="btnAgregar" class="btn btn-primary" onclick="agregarAlumno()">Agregar</button>
+                    <button id="btnBorrar" class="btn btn-danger" onclick="eliminar()">Borrar</button>
+                    <button id="btnModificar" class="btn btn-warning" onclick="modificar()">Modificar</button>
+                </div>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
